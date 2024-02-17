@@ -9,14 +9,21 @@ public class TestCountIncreases {
     String testFile;
     @Before
     public void beforeTest() {
-        countIncreases = new CountIncreases();
         testFile = "day1/test-day1";
+        countIncreases = new CountIncreases(testFile);
+
     }
 
     @Test
     public void testCount(){
-        int actual = countIncreases.parseFileToArr(testFile);
+        int actual = countIncreases.getIncCount();
         Assert.assertEquals(7, actual);
+    }
+
+    @Test
+    public void testSlidingWindowCount(){
+        int actual = countIncreases.getCountSlidingWindow(3);
+        Assert.assertEquals(5, actual);
     }
 
 }
