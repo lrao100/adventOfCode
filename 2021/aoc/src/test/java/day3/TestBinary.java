@@ -1,5 +1,5 @@
 package day3;
-import day2.Dive;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,6 +21,12 @@ public class TestBinary {
     public void testGetPower() {
         int actual = binary.getPower();
         Assert.assertEquals(198, actual);
+    }
+
+    @Test
+    public void testGetLifeSupportRating() {
+        int actual = binary.getLifeSupportRating();
+        Assert.assertEquals(230, actual);
     }
 
 }
